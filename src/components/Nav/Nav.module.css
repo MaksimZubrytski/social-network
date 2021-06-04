@@ -1,0 +1,16 @@
+.nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(66, 196, 66);
+  padding: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a.active {
+  color: gold;
+}

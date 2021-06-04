@@ -1,0 +1,12 @@
+.header {
+    grid-area: header;
+    background-color: green;
+  }
+
+  .loginBlock {
+    text-align: right;
+  }
+
+  .loginBlock a {
+    color: white;
+  }
