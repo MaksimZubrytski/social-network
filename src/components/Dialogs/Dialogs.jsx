@@ -57,7 +57,6 @@ const AddMessageForm = (props) => {
   )
 }
 
-
 const AddMessageReduxForm = reduxForm( {
   form: 'addNewMessage'
 })(AddMessageForm)
