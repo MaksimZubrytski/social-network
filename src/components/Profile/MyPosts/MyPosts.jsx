@@ -8,11 +8,13 @@ import { Textarea } from '../../common/FormsControl/FormsControl';
 const maxLength50 = maxLengthCreator(50);
 
 const MyPosts = (props) => {
-  let postElement = props.postsData.map((post) => <Post message={post.message} like={post.like} id={post.id} />)
+  let postElement = props.postsData.map((post) => <Post message={post.message} like={post.like} id={post.id} key={post.id} />)
 
   let addPostMessage = (data) => {
     props.addPost(data.postValue)
   }
+  
+  console.log("RENDER");
 
   return (
     <div className={classes.posts}>

@@ -6,10 +6,11 @@ import { NavLink } from 'react-router-dom';
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
   let pages = [];
+  
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i)
   }
-
+  
   return (
     <div>
       <div>
@@ -46,10 +47,6 @@ const Users = (props) => {
               <span>
                 <div>{user.name}</div>
                 <div>{user.status}</div>
-              </span>
-              <span>
-                <div>user.location.city</div>
-                <div>user.location.country</div>
               </span>
             </span>
           </div>
