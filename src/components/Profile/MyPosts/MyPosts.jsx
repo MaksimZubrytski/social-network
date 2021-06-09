@@ -13,8 +13,6 @@ const MyPosts = (props) => {
   let addPostMessage = (data) => {
     props.addPost(data.postValue)
   }
-  
-  console.log("RENDER");
 
   return (
     <div className={classes.posts}>
