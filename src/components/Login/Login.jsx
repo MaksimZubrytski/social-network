@@ -6,10 +6,10 @@ import { required } from "../../utils/validators/validators";
 import { Input } from "../common/FormsControl/FormsControl";
 import style from "../common/FormsControl/FormsControl.module.css"
 
-const LoginForm = (props) => {
+const LoginForm = ({ handleSubmit, error }) => {
 
   return (
-    <form method="post" onSubmit={props.handleSubmit}>
+    <form method="post" onSubmit={handleSubmit}>
       <div>
         <Field name={"email"} placeholder={"email"} component={Input} validate={[required]} />
       </div>
@@ -23,8 +23,8 @@ const LoginForm = (props) => {
       <div>
         <Field type={"checkbox"} component={Input} name={"rememberMe"} /> remember me
         </div>
-      { props.error && <div className={style.formSummaryError}>
-        {props.error}
+      { error && <div className={style.formSummaryError}>
+        {error}
       </div>
       }
       <div>
@@ -37,8 +37,6 @@ const LoginForm = (props) => {
 const LoginReduxForm = reduxForm({
   form: 'login'
 })(LoginForm)
-
-
 
 const Login = (props) => {
   const onSubmit = (formData) => {
